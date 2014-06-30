@@ -1,0 +1,5 @@
+#include "Pods-KissXML.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/KissXML" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworkActivityLogger" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/FRDLivelyButton" "${PODS_ROOT}/Headers/FormatterKit" "${PODS_ROOT}/Headers/KissXML" "${PODS_ROOT}/Headers/SGSStaggeredFlowLayout" "${PODS_ROOT}/Headers/SVProgressHUD" "${PODS_ROOT}/Headers/TMCache" "${PODS_ROOT}/Headers/TUSafariActivity" ${PODS_KISSXML_HEADER_SEARCH_PATHS}
+OTHER_LDFLAGS = -ObjC ${PODS_KISSXML_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}
