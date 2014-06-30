@@ -1,3 +1,9 @@
+# Swift iOS App Playground
+
+Playground app to explore swift
+
+## Setup
+
 enable the following Capabilities
 
 * CloudKit
