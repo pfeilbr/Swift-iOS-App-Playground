@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1D3914196DDBD70063843A /* pfeilbr-gravatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D3913196DDBD70063843A /* pfeilbr-gravatar.jpeg */; };
 		4D28962E193F6EEA00010372 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4D28962D193F6EEA00010372 /* README.md */; };
 		4D289630193F7E7A00010372 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D28962F193F7E7A00010372 /* HealthKit.framework */; };
 		4D28D14D193D658700EC6FD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28D14C193D658700EC6FD5 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 		4D32412E194216C900F991A7 /* MyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D324119194216C900F991A7 /* MyKit.framework */; };
 		4D32412F194216C900F991A7 /* MyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D324119194216C900F991A7 /* MyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4D32413C19421A1100F991A7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32413B19421A1100F991A7 /* ItemCell.swift */; };
+		4D704B0E1962F5BD004F1ADC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D704B0D1962F5BD004F1ADC /* WebKit.framework */; };
 		4D7B93FB194096110035F11C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7B93FA194096110035F11C /* Storyboard.storyboard */; };
 		4DA11130193F34C6003BD6F1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA1112F193F34C6003BD6F1 /* CloudKit.framework */; };
 		4DA11138193F6584003BD6F1 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA11137193F6584003BD6F1 /* NotificationCenter.framework */; };
@@ -107,6 +109,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D1D3913196DDBD70063843A /* pfeilbr-gravatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pfeilbr-gravatar.jpeg"; sourceTree = "<group>"; };
 		4D28962D193F6EEA00010372 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4D28962F193F7E7A00010372 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		4D289631193F804D00010372 /* com.brianpfeil.SwiftiOSApp01.MyTodayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = com.brianpfeil.SwiftiOSApp01.MyTodayExtension.entitlements; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		4D324129194216C900F991A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D32412A194216C900F991A7 /* MyKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKitTests.swift; sourceTree = "<group>"; };
 		4D32413B19421A1100F991A7 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		4D704B0D1962F5BD004F1ADC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4D7B93F9193F86A60035F11C /* SwiftiOSApp01-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftiOSApp01-Bridging-Header.h"; sourceTree = "<group>"; };
 		4D7B93FA194096110035F11C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		4DA1112E193F34AE003BD6F1 /* SwiftiOSApp01.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SwiftiOSApp01.entitlements; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D704B0E1962F5BD004F1ADC /* WebKit.framework in Frameworks */,
 				C53EEB39194548320085AD67 /* CoreData.framework in Frameworks */,
 				C53EEB0E194386470085AD67 /* AssetsLibrary.framework in Frameworks */,
 				4D32412E194216C900F991A7 /* MyKit.framework in Frameworks */,
@@ -186,6 +191,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1D3912196DDBB20063843A /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D1D3913196DDBD70063843A /* pfeilbr-gravatar.jpeg */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
 		4D28D13E193D658700EC6FD5 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +229,7 @@
 		4D28D149193D658700EC6FD5 /* SwiftiOSApp01 */ = {
 			isa = PBXGroup;
 			children = (
+				4D1D3912196DDBB20063843A /* resources */,
 				C53EEB3A194549E10085AD67 /* model */,
 				4D28D14C193D658700EC6FD5 /* AppDelegate.swift */,
 				4D32413D19421AC200F991A7 /* ui */,
@@ -299,6 +313,7 @@
 		4DA11136193F6584003BD6F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D704B0D1962F5BD004F1ADC /* WebKit.framework */,
 				C53EEB38194548320085AD67 /* CoreData.framework */,
 				C53EEB0D194386470085AD67 /* AssetsLibrary.framework */,
 				4DA1112F193F34C6003BD6F1 /* CloudKit.framework */,
@@ -513,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D28D14F193D658700EC6FD5 /* Images.xcassets in Resources */,
+				4D1D3914196DDBD70063843A /* pfeilbr-gravatar.jpeg in Resources */,
 				4D7B93FB194096110035F11C /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

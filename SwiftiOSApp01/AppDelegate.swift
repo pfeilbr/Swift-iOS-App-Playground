@@ -11,6 +11,91 @@ import AssetsLibrary
 import CloudKit
 import HealthKit
 import CoreData
+import Webkit
+
+// only can use LocalAuthentication when target is a device.  doesn't workign sim as of xcode6 beta2
+//import LocalAuthentication
+// *** NOTE ***: need to add LocalAuthentication.framework back to the project via project settings
+
+// --- Begin - Local Authentication Play Area
+/*
+class LocalAuthenticationPlay {
+    
+    func run() {
+        
+        var lactx = LAContext()
+        lactx.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "My custom local authentication reason", reply: {
+            result, err in
+                println(result)
+            })
+        
+    }
+}
+*/
+// --- End - Local Authentication Play Area
+
+class VisualEffectPlay {
+    
+    var _rootView:UIView
+    
+    init(view:UIView) {
+        _rootView = view
+    }
+
+    func installVisualEffectView() {
+        var imageView = UIImageView(image: UIImage(named: "pfeilbr-gravatar.jpeg"))
+        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+        visualEffectView.frame = imageView.bounds
+        imageView.addSubview(visualEffectView)
+        _rootView.addSubview(imageView)
+    }
+
+    func run() {
+        installVisualEffectView()
+    }
+    
+}
+
+// --- Begin - Webkit Play Area
+
+class WebkitPlay : NSObject, WKScriptMessageHandler {
+    
+    var _rootView:UIView
+    
+    init(view:UIView) {
+        _rootView = view
+    }
+    
+    func installWKWebView() {
+
+        // create user script to run after the page loads
+        var contentController = WKUserContentController()
+        var userScript = WKUserScript(source: "document.body.innerHTML = 'Hello from UserScript'; webkit.messageHandlers.callbackHandler.postMessage(\"Hello from JavaScript injected via a UserScript\");", injectionTime: WKUserScriptInjectionTime.AtDocumentEnd, forMainFrameOnly: false)
+        contentController.addUserScript(userScript)
+        contentController.addScriptMessageHandler(self, name: "callbackHandler")
+        var config = WKWebViewConfiguration()
+        var prefs = WKPreferences()
+        prefs.javaScriptCanOpenWindowsAutomatically = true;
+        config.preferences = prefs
+        config.userContentController = contentController
+
+        var webView = WKWebView(frame: _rootView.frame, configuration: config)
+        _rootView.addSubview(webView)
+        webView.loadRequest(NSURLRequest(URL: NSURL(string: "http://brianpfeil.com")))
+    }
+    
+    // the user script contains js code to force this callback to run
+    func userContentController(userContentController: WKUserContentController!, didReceiveScriptMessage message: WKScriptMessage!) {
+        if(message.name == "callbackHandler") {
+            println("JavaScript is sending a message \(message.body)")
+        }
+    }
+    
+    func run() {
+        installWKWebView()
+    }
+}
+// --- End - Webkit Play Area
 
 // --- Begin - HealthKit Play Area
 
@@ -626,7 +711,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //CloudKitPlay().run()
         //HealthKitPlay().run()
         //AssetLibraryPlay(window: window!).run()
-        CoreDataPlay().run()
+        //CoreDataPlay().run()
+        //WebkitPlay(view: window!).run()
+        VisualEffectPlay(view: window!).run()
+        //LocalAuthenticationPlay().run()
         
         return true
     }
@@ -647,30 +735,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         println("didReceiveLocalNotification:\n\(notification)")
     }
     
-    
-        
-    func applicationWillResignActive(application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
+    func applicationWillResignActive(application: UIApplication) {}
+    func applicationDidEnterBackground(application: UIApplication) {}
+    func applicationWillEnterForeground(application: UIApplication) {}
+    func applicationDidBecomeActive(application: UIApplication) {}
+    func applicationWillTerminate(application: UIApplication) {}
 }
 

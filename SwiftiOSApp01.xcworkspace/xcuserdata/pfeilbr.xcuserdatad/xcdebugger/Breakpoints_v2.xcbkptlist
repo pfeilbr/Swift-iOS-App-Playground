@@ -6,47 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyKit/ItemCell.swift"
-            timestampString = "423763420.299477"
+            filePath = "SwiftiOSApp01/AppDelegate.swift"
+            timestampString = "426628161.20703"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "layoutSubviews()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyKit/ItemCell.swift"
-            timestampString = "423763685.46757"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "init(style:reuseIdentifier:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTodayExtension/TodayViewController.swift"
-            timestampString = "425846519.453053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56">
+            startingLineNumber = "28"
+            endingLineNumber = "28">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -56,59 +24,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftiOSApp01/AppDelegate.swift"
-            timestampString = "425846470.819665"
+            timestampString = "426630231.822482"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "578"
-            endingLineNumber = "578"
-            landmarkName = "fetchPerson()"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "installWKWebView()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftiOSApp01/AppDelegate.swift"
-            timestampString = "425846472.537419"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "582"
-            endingLineNumber = "582"
-            landmarkName = "fetchPerson()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftiOSApp01.CoreDataPlay.(fetchPerson (SwiftiOSApp01.CoreDataPlay) -&gt; () -&gt; ()).(closure #1)"
-                  moduleName = "SwiftiOSApp01"
-                  urlString = "file:///Users/pfeilbr/Dropbox/mac01/Users/brianpfeil/projects/SwiftiOSApp01/SwiftiOSApp01/AppDelegate.swift"
-                  timestampString = "425846954.984271"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "582"
-                  endingLineNumber = "582"
-                  offsetFromSymbolStart = "143">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftiOSApp01.CoreDataPlay.(fetchPerson (SwiftiOSApp01.CoreDataPlay) -&gt; () -&gt; ()).(closure #1)"
-                  moduleName = "SwiftiOSApp01"
-                  urlString = "file:///Users/pfeilbr/Dropbox/mac01/Users/brianpfeil/projects/SwiftiOSApp01/SwiftiOSApp01/AppDelegate.swift"
-                  timestampString = "425846954.984433"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "582"
-                  endingLineNumber = "582"
-                  offsetFromSymbolStart = "1085">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
