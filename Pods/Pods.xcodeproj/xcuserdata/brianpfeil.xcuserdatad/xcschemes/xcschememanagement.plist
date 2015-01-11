@@ -6,103 +6,103 @@
 	<dict>
 		<key>Pods-AFNetworkActivityLogger.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-AFNetworking.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-FRDLivelyButton.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-FormatterKit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-KissXML.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-SGSStaggeredFlowLayout.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-SVProgressHUD.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-TMCache.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-TUSafariActivity.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>31B1D4596C5C42D0871B5784</key>
+		<key>05773F86F71D4654B13FAE9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>36DCDEECEAAA4A1086C078D4</key>
+		<key>22944366AABE4474BF7896A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56E7330E0DEA424D8A0A786D</key>
+		<key>6821240D34CC4B20847F02D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88096768512E41C799E9866F</key>
+		<key>691FDC9FD1C24624B0D10FF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A1D266F4279D4D64A7A831AB</key>
+		<key>88B735E5A3DE49B9B1AA95E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B15DEA25E38B4F26AAB6E738</key>
+		<key>A090F539C28A4FCE8256F2FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5E5C632A85B47B2A571E587</key>
+		<key>A2234403653A40668498656C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D24BCB34442C40D1A18B195B</key>
+		<key>A2C083C39B4341D3AE6BE64C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC45A92DC10A40279CC615C1</key>
+		<key>C5C6209DB1884C88B7CBE62A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF928EF1035848CBA555587C</key>
+		<key>CAB3AE95455246A78921438D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

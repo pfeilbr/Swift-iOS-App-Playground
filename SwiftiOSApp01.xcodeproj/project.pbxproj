@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D00C6F1197072E700B85B33 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D00C6F0197072E700B85B33 /* CoreMotion.framework */; };
 		4D1D3914196DDBD70063843A /* pfeilbr-gravatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D3913196DDBD70063843A /* pfeilbr-gravatar.jpeg */; };
 		4D28962E193F6EEA00010372 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4D28962D193F6EEA00010372 /* README.md */; };
 		4D289630193F7E7A00010372 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D28962F193F7E7A00010372 /* HealthKit.framework */; };
@@ -25,10 +26,15 @@
 		4DA11138193F6584003BD6F1 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA11137193F6584003BD6F1 /* NotificationCenter.framework */; };
 		4DA1113D193F6584003BD6F1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1113C193F6584003BD6F1 /* TodayViewController.swift */; };
 		4DA11142193F6584003BD6F1 /* com.brianpfeil.SwiftiOSApp01.MyTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4DA11135193F6584003BD6F1 /* com.brianpfeil.SwiftiOSApp01.MyTodayExtension.appex */; };
+		4DB07C6619C787020003C6DE /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4DB07C6319C787020003C6DE /* beep.wav */; };
+		4DB07C6719C787020003C6DE /* funk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DB07C6419C787020003C6DE /* funk.mp3 */; };
+		4DB07C6819C787020003C6DE /* police_radio_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DB07C6519C787020003C6DE /* police_radio_1.mp3 */; };
+		4DC688C419D31E0300B412FF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC688C319D31E0300B412FF /* CoreLocation.framework */; };
 		84B22A0901D44155AD77D321 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4A3BB522B14E9784BC2F2D /* libPods.a */; };
 		C53EEB0E194386470085AD67 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53EEB0D194386470085AD67 /* AssetsLibrary.framework */; };
 		C53EEB39194548320085AD67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53EEB38194548320085AD67 /* CoreData.framework */; };
 		C53EEB3D194549FF0085AD67 /* App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C53EEB3B194549FF0085AD67 /* App.xcdatamodeld */; };
+		C5F1EFE7197A9BA3002D6A07 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F1EFE6197A9BA3002D6A07 /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +115,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D00C6F0197072E700B85B33 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		4D1D3913196DDBD70063843A /* pfeilbr-gravatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pfeilbr-gravatar.jpeg"; sourceTree = "<group>"; };
 		4D28962D193F6EEA00010372 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4D28962F193F7E7A00010372 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -136,9 +143,14 @@
 		4DA11137193F6584003BD6F1 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		4DA1113B193F6584003BD6F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DA1113C193F6584003BD6F1 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		4DB07C6319C787020003C6DE /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
+		4DB07C6419C787020003C6DE /* funk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = funk.mp3; sourceTree = "<group>"; };
+		4DB07C6519C787020003C6DE /* police_radio_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = police_radio_1.mp3; sourceTree = "<group>"; };
+		4DC688C319D31E0300B412FF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C53EEB0D194386470085AD67 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		C53EEB38194548320085AD67 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C53EEB3C194549FF0085AD67 /* App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = App.xcdatamodel; sourceTree = "<group>"; };
+		C5F1EFE6197A9BA3002D6A07 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		D108CA4351C042198FC67DAD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		DB4A3BB522B14E9784BC2F2D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -148,6 +160,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC688C419D31E0300B412FF /* CoreLocation.framework in Frameworks */,
+				C5F1EFE7197A9BA3002D6A07 /* SpriteKit.framework in Frameworks */,
+				4D00C6F1197072E700B85B33 /* CoreMotion.framework in Frameworks */,
 				4D704B0E1962F5BD004F1ADC /* WebKit.framework in Frameworks */,
 				C53EEB39194548320085AD67 /* CoreData.framework in Frameworks */,
 				C53EEB0E194386470085AD67 /* AssetsLibrary.framework in Frameworks */,
@@ -194,6 +209,9 @@
 		4D1D3912196DDBB20063843A /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				4DB07C6319C787020003C6DE /* beep.wav */,
+				4DB07C6419C787020003C6DE /* funk.mp3 */,
+				4DB07C6519C787020003C6DE /* police_radio_1.mp3 */,
 				4D1D3913196DDBD70063843A /* pfeilbr-gravatar.jpeg */,
 			);
 			name = resources;
@@ -229,9 +247,9 @@
 		4D28D149193D658700EC6FD5 /* SwiftiOSApp01 */ = {
 			isa = PBXGroup;
 			children = (
+				4D28D14C193D658700EC6FD5 /* AppDelegate.swift */,
 				4D1D3912196DDBB20063843A /* resources */,
 				C53EEB3A194549E10085AD67 /* model */,
-				4D28D14C193D658700EC6FD5 /* AppDelegate.swift */,
 				4D32413D19421AC200F991A7 /* ui */,
 				4D28D14A193D658700EC6FD5 /* Supporting Files */,
 				4DA1112E193F34AE003BD6F1 /* SwiftiOSApp01.entitlements */,
@@ -313,6 +331,9 @@
 		4DA11136193F6584003BD6F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DC688C319D31E0300B412FF /* CoreLocation.framework */,
+				C5F1EFE6197A9BA3002D6A07 /* SpriteKit.framework */,
+				4D00C6F0197072E700B85B33 /* CoreMotion.framework */,
 				4D704B0D1962F5BD004F1ADC /* WebKit.framework */,
 				C53EEB38194548320085AD67 /* CoreData.framework */,
 				C53EEB0D194386470085AD67 /* AssetsLibrary.framework */,
@@ -473,6 +494,9 @@
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = XZ493P2355;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
 								enabled = 1;
 							};
@@ -527,6 +551,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB07C6619C787020003C6DE /* beep.wav in Resources */,
+				4DB07C6719C787020003C6DE /* funk.mp3 in Resources */,
+				4DB07C6819C787020003C6DE /* police_radio_1.mp3 in Resources */,
 				4D28D14F193D658700EC6FD5 /* Images.xcassets in Resources */,
 				4D1D3914196DDBD70063843A /* pfeilbr-gravatar.jpeg in Resources */,
 				4D7B93FB194096110035F11C /* Storyboard.storyboard in Resources */,
@@ -769,6 +796,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftiOSApp01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -786,6 +814,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftiOSApp01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

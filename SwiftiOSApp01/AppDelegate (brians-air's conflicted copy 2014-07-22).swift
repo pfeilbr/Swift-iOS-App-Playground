@@ -12,6 +12,191 @@ import CloudKit
 import HealthKit
 import CoreData
 import Webkit
+import CoreMotion
+import SpriteKit
+
+
+class SpriteKitPlay {
+    
+    enum CollisionType:UInt32 {
+        case Ball = 1
+        case Rock = 2
+    }
+    
+    class MyScene : SKScene {
+        var _lbl = SKLabelNode(text: "Hello")
+        
+        override func didMoveToView(view: SKView!) {
+            backgroundColor = UIColor.blueColor()
+            _lbl.fontName = "Futura-CondensedExtraBold"
+            _lbl.fontSize = 48
+            _lbl.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame))
+            addChild(_lbl)
+        }
+        
+        override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+            var t = touches.anyObject() as UITouch
+            var p = t.locationInNode(self)
+            var n = nodeAtPoint(p)
+            if n == _lbl {
+                println("label touched")
+                var startActn = SKAction.scaleBy(2.0, duration: 0.1)
+                var endActn = SKAction.scaleBy(0.5, duration: 0.1)
+                _lbl.fontColor = UIColor.yellowColor()
+                _lbl.runAction(SKAction.sequence([startActn, endActn]), completion: {
+                    self._lbl.fontColor = UIColor.whiteColor()
+                    var gscn = GameScene(size: self.frame.size)
+                    self.view.presentScene(gscn)
+                })
+                
+            }
+            
+            var snd = SKAction.playSoundFileNamed("beep.wav", waitForCompletion: false)
+            runAction(snd)
+            
+
+        }
+        
+    }
+    
+    class GameScene : SKScene, SKPhysicsContactDelegate {
+        var _score = 0
+        var _nodes:[SKNode] = []
+
+        var _circle = SKShapeNode(circleOfRadius: 30)
+        var _scoreLabel = SKLabelNode()
+        
+        override func didMoveToView(view: SKView!) {
+            
+            var radius = 30.0
+            backgroundColor = UIColor.blackColor()
+            _circle.fillColor = UIColor.orangeColor()
+            _circle.strokeColor = UIColor.whiteColor()
+            _circle.lineWidth = 10
+            _circle.glowWidth = 5
+            
+            _circle.physicsBody = SKPhysicsBody(circleOfRadius: radius)
+            _circle.physicsBody.dynamic = false
+            _circle.physicsBody.categoryBitMask = CollisionType.Ball.toRaw()
+            _circle.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame))
+            addChild(_circle)
+            
+            
+//            for idx in 0..<10 {
+//                var n = SKShapeNode(circleOfRadius: 20)
+//                n.fillColor = UIColor.blueColor()
+//                n.position = CGPoint(x: 20, y: self.size.height)
+//                _nodes.append(n)
+//                addChild(n)
+//            }
+            
+            var addRock = SKAction.runBlock({ self.addRock() })
+            var wait = SKAction.waitForDuration(0.25, withRange: 0.3)
+            var makeRocks = SKAction.sequence([addRock, wait])
+            runAction(SKAction.repeatActionForever(makeRocks))
+            
+            addBat()
+            
+            addScoreLabel()
+            
+            self.physicsWorld.contactDelegate = self
+            
+        }
+        
+        func didBeginContact(contact: SKPhysicsContact!) {
+            println("didBeginContact called.  contact.bodyA.node.name = \(contact.bodyA.node.name)")
+            runAction(SKAction.playSoundFileNamed("beep.wav", waitForCompletion: false))
+            contact.bodyB.node.removeFromParent()
+            _scoreLabel.text = "Score: \(_score)"
+            _score++
+            
+        }
+        
+        override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)  {
+            var t = touches.anyObject() as UITouch
+            var actn = SKAction.moveTo(t.locationInNode(self), duration: 0.1)
+            actn.timingMode = SKActionTimingMode.EaseOut
+            _circle.runAction(actn)
+        }
+        
+        override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
+            var t = touches.anyObject() as UITouch
+            _circle.position = t.locationInNode(self)
+        }
+        
+        func addScoreLabel() {
+            _scoreLabel.text = "Score: \(_score)"
+            _scoreLabel.position = CGPoint(x: 250, y: self.size.height - _scoreLabel.frame.height - 15)
+            _scoreLabel.fontColor = UIColor.whiteColor()
+            addChild(_scoreLabel)
+        }
+        
+        func addRock() {
+            var rock = SKShapeNode(circleOfRadius: 15)
+            rock.fillColor = UIColor.yellowColor()
+            rock.position = CGPoint(x: CGFloat(arc4random_uniform(UInt32(self.size.width))), y: self.size.height + 50)
+            rock.name = "rock"
+            rock.physicsBody = SKPhysicsBody(circleOfRadius: 15)
+            rock.physicsBody.usesPreciseCollisionDetection = true
+            rock.physicsBody.categoryBitMask = CollisionType.Rock.toRaw()
+            rock.physicsBody.collisionBitMask = CollisionType.Ball.toRaw()
+            rock.physicsBody.contactTestBitMask = CollisionType.Ball.toRaw()
+            self.addChild(rock)
+        }
+        
+        func addBat() {
+            var spriteSheetTexture = SKTexture(imageNamed: "bat-sprite-sheet")
+            
+            var txtrs:[SKTexture] = []
+            for idx in 0..<4 {
+                var x = (CGFloat(idx)*0.25)
+                var txtr = SKTexture(rect: CGRect(x: x, y: 0, width: 0.25, height: 0.25), inTexture: spriteSheetTexture)
+                txtrs.append(txtr)
+            }
+            var batAnimations = SKAction.animateWithTextures(txtrs, timePerFrame: 0.1)
+            
+            var batSprite = SKSpriteNode(texture: txtrs[0])
+            batSprite.position = CGPoint(x: 300, y: 300)
+            batSprite.runAction(SKAction.repeatActionForever(batAnimations))
+            addChild(batSprite)
+        }
+        
+        override func update(currentTime: NSTimeInterval) {
+            var nodesToRemove:[SKNode] = []
+            enumerateChildNodesWithName("rock", usingBlock: {
+                node, stop in
+                
+                // turn physicsBody and colision logic off for _circle to have this work
+                if self._circle.containsPoint(node.position) {
+                    println("rock collided with cirlce")
+                    self.runAction(SKAction.playSoundFileNamed("beep.wav", waitForCompletion: false))
+                    nodesToRemove.append(node)
+                    self._score++
+                    
+                }
+            })
+            
+            self.removeChildrenInArray(nodesToRemove)
+            _scoreLabel.text = "Score: \(_score)"
+        }
+    }
+    
+    
+    var _rootView:UIView
+    var _skView:SKView
+    
+    init(view:UIView) {
+        _rootView = view
+        _skView = SKView(frame: view.frame)
+        _skView.showsFPS = true
+        _rootView.addSubview(_skView)
+    }
+    
+    func run() {
+        var scn = MyScene(size: _skView.bounds.size)
+        _skView.presentScene(scn)
+    }
+}
 
 // only can use LocalAuthentication when target is a device.  doesn't workign sim as of xcode6 beta2
 //import LocalAuthentication
@@ -34,6 +219,42 @@ class LocalAuthenticationPlay {
 */
 // --- End - Local Authentication Play Area
 
+class CoreMotionPlay {
+    
+    var _rootView:UIView
+    var _textView:UITextView
+    var _pedometer = CMPedometer()
+    
+    
+    init(view:UIView) {
+        _rootView = view
+        _textView = UITextView(frame: _rootView.bounds)
+        _textView.editable = false
+        _textView.text = ""
+    }
+    
+    func installOutputView() {
+        _rootView.addSubview(_textView)
+
+        _pedometer.startPedometerUpdatesFromDate(NSDate(), withHandler: {
+            data, err in
+//            data.startDate
+//            data.endDate
+//            data.distance
+            if let steps = data?.numberOfSteps? {
+                self._textView.text = "steps: \(steps)\n" + self._textView.text
+            }
+        })
+        
+    }
+    
+    func run() {
+        installOutputView()
+    }
+    
+}
+
+
 class VisualEffectPlay {
     
     var _rootView:UIView
@@ -43,7 +264,7 @@ class VisualEffectPlay {
     }
 
     func installVisualEffectView() {
-        var imageView = UIImageView(image: UIImage(named: "pfeilbr-gravatar.jpeg"))
+        var imageView = UIImageView(image: UIImage(named: "profile"))
         var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
         visualEffectView.frame = imageView.bounds
         imageView.addSubview(visualEffectView)
@@ -396,7 +617,7 @@ class MyTVC : UITableViewController {
         var cellId = "MyCell"
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellId)
         //var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellId) as UITableViewCell
-        cell.text = items[indexPath.row]
+        cell.textLabel.text = items[indexPath.row]
         return cell
     }
     
@@ -713,8 +934,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //AssetLibraryPlay(window: window!).run()
         //CoreDataPlay().run()
         //WebkitPlay(view: window!).run()
-        VisualEffectPlay(view: window!).run()
+        //VisualEffectPlay(view: window!).run()
         //LocalAuthenticationPlay().run()
+        //CoreMotionPlay(view: window!).run()
+        SpriteKitPlay(view: window!).run()
         
         return true
     }

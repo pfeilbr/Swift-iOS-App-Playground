@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0600"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5E5C632A85B47B2A571E587"
+               BlueprintIdentifier = "CAB3AE95455246A78921438D"
                BuildableName = "libPods-FRDLivelyButton.a"
                BlueprintName = "Pods-FRDLivelyButton"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -1,23 +1,26 @@
 PODS:
-  - AFNetworkActivityLogger (2.0.2):
+  - AFNetworkActivityLogger (2.0.3):
+    - AFNetworking/NSURLConnection (~> 2.0)
     - AFNetworking/NSURLSession (~> 2.0)
-  - AFNetworking (2.2.4):
+  - AFNetworking (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
     - AFNetworking/UIKit
-  - AFNetworking/NSURLConnection (2.2.4):
+  - AFNetworking/NSURLConnection (2.3.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.2.4):
-    - AFNetworking/NSURLConnection
-  - AFNetworking/Reachability (2.2.4)
-  - AFNetworking/Security (2.2.4)
-  - AFNetworking/Serialization (2.2.4)
-  - AFNetworking/UIKit (2.2.4):
+  - AFNetworking/NSURLSession (2.3.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.3.1)
+  - AFNetworking/Security (2.3.1)
+  - AFNetworking/Serialization (2.3.1)
+  - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - FormatterKit (1.1.2):
@@ -35,7 +38,7 @@ PODS:
   - FormatterKit/TimeIntervalFormatter (1.1.2)
   - FormatterKit/UnitOfInformationFormatter (1.1.2)
   - FormatterKit/URLRequestFormatter (1.1.2)
-  - FRDLivelyButton (1.1.2)
+  - FRDLivelyButton (1.1.3)
   - KissXML (5.0)
   - SGSStaggeredFlowLayout (0.0.1)
   - SVProgressHUD (1.0)
@@ -58,10 +61,10 @@ EXTERNAL SOURCES:
     :git: https://github.com/pj4533/SGSStaggeredFlowLayout
 
 SPEC CHECKSUMS:
-  AFNetworkActivityLogger: 45ca411593444cbdc401b12924b4c17082ad512a
-  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  AFNetworkActivityLogger: d6a2d2755fada3a1fbf1f490ec0dd92224e092a4
+  AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
   FormatterKit: a7d9076e2923f272d098028f086822c329fcb410
-  FRDLivelyButton: 717c6907bd6bb588f775a50580e216fe83abcade
+  FRDLivelyButton: 7ef8c4f9b116b211dc64eb3c388adc65b342e63c
   KissXML: e537c38b18ede903ee6de45953a9bd86c131ebe9
   SGSStaggeredFlowLayout: a5c8fe0db07cbd440a6c12118633ed015622123a
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50

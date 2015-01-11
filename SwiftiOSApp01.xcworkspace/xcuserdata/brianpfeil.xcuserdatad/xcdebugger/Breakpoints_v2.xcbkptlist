@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftiOSApp01/AppDelegate.swift"
-            timestampString = "423972187.996321"
+            timestampString = "440946568.686192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "567"
-            endingLineNumber = "567"
-            landmarkName = "createPerson()"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "update(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,149 +26,83 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftiOSApp01/AppDelegate.swift"
-            timestampString = "423972356.639136"
+            timestampString = "440946610.394323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "580"
-            endingLineNumber = "580"
-            landmarkName = "fetchPerson()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftiOSApp01/AppDelegate.swift"
-            timestampString = "423973022.317675"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "585"
-            endingLineNumber = "585"
-            landmarkName = "fetchPerson()"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "update(_:)"
             landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SwiftiOSApp01.AppDelegate.__deallocating_deinit"
+                  symbolName = "SwiftiOSApp01.SpriteKitPlay.GameScene.update (SwiftiOSApp01.SpriteKitPlay.GameScene)(Swift.Double) -&gt; ()"
                   moduleName = "SwiftiOSApp01"
                   urlString = "file:///Users/brianpfeil/Dropbox/mac01/Users/brianpfeil/projects/SwiftiOSApp01/SwiftiOSApp01/AppDelegate.swift"
-                  timestampString = "423973022.320415"
+                  timestampString = "440946610.401326"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "588"
-                  endingLineNumber = "588"
-                  offsetFromSymbolStart = "26">
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "257">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "@objc SwiftiOSApp01.AppDelegate.__ivar_destroyer"
+                  symbolName = "SwiftiOSApp01.SpriteKitPlay.GameScene.(update (SwiftiOSApp01.SpriteKitPlay.GameScene) -&gt; (Swift.Double) -&gt; ()).(closure #1)"
                   moduleName = "SwiftiOSApp01"
                   urlString = "file:///Users/brianpfeil/Dropbox/mac01/Users/brianpfeil/projects/SwiftiOSApp01/SwiftiOSApp01/AppDelegate.swift"
-                  timestampString = "423973022.320851"
+                  timestampString = "440946610.401696"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "588"
-                  endingLineNumber = "588"
-                  offsetFromSymbolStart = "11">
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
+                  offsetFromSymbolStart = "27">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "top_level_code"
+                  symbolName = "reabstraction thunk helper from @callee_owned (@owned Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SKNode&gt;, @unowned Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; (@unowned ()) to @callee_owned (@in (Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SKNode&gt;, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;)) -&gt; (@out ())"
                   moduleName = "SwiftiOSApp01"
                   urlString = "file:///Users/brianpfeil/Dropbox/mac01/Users/brianpfeil/projects/SwiftiOSApp01/SwiftiOSApp01/AppDelegate.swift"
-                  timestampString = "423973022.321192"
+                  timestampString = "440946610.401996"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "588"
-                  endingLineNumber = "588"
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
                   offsetFromSymbolStart = "4">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftiOSApp01/AppDelegate.swift"
-            timestampString = "423973025.145842"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "586"
-            endingLineNumber = "586"
-            landmarkName = "fetchPerson()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftiOSApp01/AppDelegate.swift"
-            timestampString = "423973026.799892"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "584"
-            endingLineNumber = "584"
-            landmarkName = "fetchPerson()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftiOSApp01/AppDelegate.swift"
-            timestampString = "423975055.097391"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "582"
-            endingLineNumber = "582"
-            landmarkName = "fetchPerson()"
-            landmarkType = "5">
-            <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SwiftiOSApp01.CoreDataPlay.(fetchPerson (SwiftiOSApp01.CoreDataPlay) -&gt; () -&gt; ()).(closure #1)"
+                  symbolName = "reabstraction thunk helper from @callee_owned (@in (Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SKNode&gt;, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;)) -&gt; (@out ()) to @callee_owned (@owned Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SKNode&gt;, @unowned Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; (@unowned ())"
                   moduleName = "SwiftiOSApp01"
                   urlString = "file:///Users/brianpfeil/Dropbox/mac01/Users/brianpfeil/projects/SwiftiOSApp01/SwiftiOSApp01/AppDelegate.swift"
-                  timestampString = "423975415.583485"
+                  timestampString = "440946610.402301"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "582"
-                  endingLineNumber = "582"
-                  offsetFromSymbolStart = "143">
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "12">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SwiftiOSApp01.CoreDataPlay.(fetchPerson (SwiftiOSApp01.CoreDataPlay) -&gt; () -&gt; ()).(closure #1)"
+                  symbolName = "reabstraction thunk helper from @callee_owned (@owned Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SKNode&gt;, @unowned Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; (@unowned ()) to @callee_unowned @objc_block (@unowned Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SKNode&gt;, @unowned Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; (@unowned ())"
                   moduleName = "SwiftiOSApp01"
                   urlString = "file:///Users/brianpfeil/Dropbox/mac01/Users/brianpfeil/projects/SwiftiOSApp01/SwiftiOSApp01/AppDelegate.swift"
-                  timestampString = "423975415.583714"
+                  timestampString = "440946610.402608"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "582"
-                  endingLineNumber = "582"
-                  offsetFromSymbolStart = "1085">
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "4">
                </Location>
             </Locations>
          </BreakpointContent>
