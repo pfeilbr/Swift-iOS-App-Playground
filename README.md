@@ -2,6 +2,18 @@
 
 Playground app to explore swift
 
+**Includes Examples Covering the Following Frameworks**
+
+* UIKit
+* AssetsLibrary
+* CloudKit
+* HealthKit
+* CoreData
+* WebKit
+* CoreMotion
+* SpriteKit
+* CoreLocation
+
 ## Setup
 
 enable the following Capabilities
