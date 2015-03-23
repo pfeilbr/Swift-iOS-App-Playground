@@ -16,6 +16,7 @@ import CoreMotion
 import SpriteKit
 import CoreLocation
 
+
 // --- Begin - CoreLocation Play Area
 class CoreLocationPlay : UIViewController, CLLocationManagerDelegate {
     let _locManager = CLLocationManager()
@@ -31,7 +32,7 @@ class CoreLocationPlay : UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         println(status)
-        if (status == CLAuthorizationStatus.Authorized || status == CLAuthorizationStatus.AuthorizedWhenInUse) {
+        if (status == CLAuthorizationStatus.AuthorizedAlways || status == CLAuthorizationStatus.AuthorizedWhenInUse) {
             _locManager.startUpdatingLocation()
         }
     }
@@ -54,6 +55,100 @@ class SpriteKitPlay {
     enum CollisionType:UInt32 {
         case Ball = 1
         case Rock = 2
+    }
+    
+    class TapScene : SKScene {
+        
+        var _timeInterval:NSTimeInterval = 2.0
+        var _timeIntervalIncrement:NSTimeInterval = 0.1
+        var _score = 0
+        var _scoreLabel = SKLabelNode()
+        var _circle = SKShapeNode(circleOfRadius: 30)
+        var timer:NSTimer!;
+
+        override func didMoveToView(view: SKView) {
+            backgroundColor = UIColor.blackColor()
+            
+            _circle.fillColor = UIColor.orangeColor()
+            _circle.strokeColor = UIColor.whiteColor()
+            //_circle.lineWidth = 10
+            //_circle.glowWidth = 5
+            
+            _circle.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame))
+            addChild(_circle)
+            
+            addScoreLabel()
+            
+            start()
+        }
+        
+        func addScoreLabel() {
+            _scoreLabel.text = "Score: \(_score)"
+            _scoreLabel.position = CGPoint(x: 250, y: self.size.height - _scoreLabel.frame.height - 15)
+            _scoreLabel.fontColor = UIColor.whiteColor()
+            _scoreLabel.fontName = UIFont.boldSystemFontOfSize(32.0).fontName
+            addChild(_scoreLabel)
+        }
+        
+        func start() {
+            updateTimer()
+        }
+        
+        func updateTimer() {
+            if (timer != nil) {
+                timer.invalidate()
+            }
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(_timeInterval, target: self, selector: Selector("randomPlacement"), userInfo: nil, repeats: true)
+            
+        }
+        
+        func randomPlacement() {
+            let x = (self.size.width - _circle.frame.size.width);
+            let y = (self.size.height - (_circle.frame.size.height) - _scoreLabel.frame.height);
+            
+            let randX = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+            let randY = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+            
+            _circle.position = CGPoint(x: CGFloat(x*randX) + _circle.frame.size.width / 2, y: CGFloat(y*randY) + (_circle.frame.size.height / 2));
+        }
+        
+        override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+            var t = touches.anyObject() as UITouch
+            var p = t.locationInNode(self)
+            var n = nodeAtPoint(p)
+            if n == _circle {
+                
+                if (timer != nil) {
+                    timer.invalidate()
+                }
+                
+                println("circle touched")
+                
+                var startActn = SKAction.scaleBy(2.0, duration: 0.1)
+                var endActn = SKAction.scaleBy(0.5, duration: 0.1)
+                _circle.runAction(SKAction.sequence([startActn, endActn]), completion: {
+                    self._score += 1
+                    self._scoreLabel.text = "Score: \(self._score)"
+                    
+                    self.randomPlacement()
+                    
+                    self._timeInterval -= self._timeIntervalIncrement
+                    self.updateTimer()
+                    
+                    var snd = SKAction.playSoundFileNamed("beep.wav", waitForCompletion: false)
+                    self.runAction(snd)
+                })
+                
+
+            }
+            
+        
+        }
+        
+        
+
+        
     }
     
     class MyScene : SKScene {
@@ -230,10 +325,14 @@ class SpriteKitPlay {
     }
     
     func run() {
+        /*
         var scn1 = MyScene(size: _skView.bounds.size)
         scn1.message = "Scene 1"
-        
         _skView.presentScene(scn1)
+        */
+        
+        var tapScn = TapScene(size: _skView.bounds.size)
+        _skView.presentScene(tapScn)
         
         /*
         var scn2 = MyScene(size: _skView.bounds.size)

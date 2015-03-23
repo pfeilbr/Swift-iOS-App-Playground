@@ -943,7 +943,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MyTodayExtension/com.brianpfeil.SwiftiOSApp01.MyTodayExtension.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Brian Pfeil (2H5S3M96K8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -962,7 +962,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MyTodayExtension/com.brianpfeil.SwiftiOSApp01.MyTodayExtension.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Brian Pfeil (2H5S3M96K8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyTodayExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
